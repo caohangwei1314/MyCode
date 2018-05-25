@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+*
+{
+    margin:0px auto;
+    padding:0px;
+}
+.font
+{
+    widows: 80px;
+    height:30px;
+    line-height:30px;
+    display: block;
+    font-size:15px;
+    text-align: center;
+    color:black;
+    border:0px solid #409EFF;
+}
+.buttons
+{
+    width: 80px;
+    height:30px;
+    display: block;
+    text-align: center;
+    border:1px solid #C0C4CC;
+    border-radius: 5px;
+    background: #fff;
+    color: black;
+}
+.horizontal
+{
+    width:0px;
+    height:2px;
+    background: #409EFF;
+    transition:all 0.5s;
+}
+.box{
+    width:80px;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+    function addEvent(obj,type,handle){
+        try{ // Chrome、FireFox、Opera、Safari、IE9.0及其以上版本
+            obj.addEventListener(type,handle,false);
+        }catch(e){
+            try{ // IE8.0及其以下版本
+                obj.attachEvent('on' + type,handle);
+            }catch(e){ // 早期浏览器
+                obj['on' + type] = handle;
+            }
+        }
+    }
+    addEvent(document.getElementById("but"),"click",changes);
+    function changes(){
+        var h=document.getElementById("horizontals");
+        var f=document.getElementById("font");
+        var horizontalWidth=window.getComputedStyle(horizontals).width;//用当前页面最终元素来判断
+        if(horizontalWidth == "0px")
+        {
+            h.style.width="80px";
+            f.style.color="blue";
+        }
+        else
+        {
+            h.style.width="0px";
+            f.style.color="black";
+        }
+    }
+}
+</script>
+</head>
+<body>
+    <div class="box">
+        <span class="font" id="font">前端学院</span>
+        <div class="horizontal" id="horizontals"></div><br/>
+        <button class="buttons" id="but">切换样式</button>
+    </div>
+</body>
+</html>
