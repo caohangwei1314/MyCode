@@ -1,0 +1,47 @@
+/* *{
+  margin:0px;
+  padding:0px;
+} */
+body{
+  height:100%;
+}
+
+h3{
+  margin:0px;
+  margin-right:10px;
+  /* float: left; */
+}
+
+.nobold{
+  font-weight: 500;
+}
+
+.wrap{
+  float: left;
+  margin-right: 30px;
+}
+
+.left{
+  float: left;
+  width:250px;
+  text-align: center;
+  margin:0px 30px;
+  background: rgb(101,164,250);
+  color:#FFF;
+  height:895px;
+}
+
+.right{
+  float: left;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}

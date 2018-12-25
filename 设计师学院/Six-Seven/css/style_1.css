@@ -1,0 +1,45 @@
+/* *{
+  margin:0px;
+  padding:0px;
+} */
+body{
+  height:100%;
+}
+
+h1{
+  margin:0px;
+}
+
+h3{
+  margin:0px;
+  margin-right:10px;
+  /* float: left; */
+}
+
+.nobold{
+  font-weight: 500;
+}
+
+.wrap{
+  float: left;
+  margin-right: 30px;
+}
+
+.left{
+  margin:0px;
+}
+
+.right{
+  float: left;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
